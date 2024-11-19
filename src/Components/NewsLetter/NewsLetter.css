@@ -1,0 +1,219 @@
+/* ! 🔥 💪🏻 Bn Ramadan fullstack MERN project 2 ( E-commerce fullstack app ) */
+/* ! " The end of this project is the completing of future successes and creativity , Just strive, be patient, commit and keep going. " */
+/* ! 🔥 💪🏻 Always forward ! 💪🏻 🔥 */
+
+.newsletter {
+  width: 70%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding: 0px 80px;
+  margin-bottom: 100px;
+  background: linear-gradient(180deg, #fde1ff 0%, #e1ffea22 60%);
+  gap: 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+.newsletter:hover {
+  transform: translateY(-5px);
+}
+
+.newsletter h1 {
+  color: #454545;
+  font-size: 45px;
+  font-weight: 600;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.newsletter h1:hover {
+  color: #333;
+}
+
+.newsletter p {
+  color: #454545;
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: center;
+  max-width: 800px;
+}
+
+.newsletter div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  width: 100%;
+  max-width: 730px;
+  height: 60px;
+  border-radius: 50px;
+  border: 1px solid #e3e3e3;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+.newsletter div:focus-within {
+  border-color: #000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.newsletter input {
+  width: 70%;
+  margin-left: 20px;
+  border: none;
+  outline: none;
+  color: #616161;
+  font-family: Poppins, sans-serif;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.newsletter div button {
+  width: 150px;
+  height: 60px;
+  border-radius: 50px;
+  background: black;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.newsletter div button:hover {
+  background: #333;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.newsletter div button:active {
+  transform: translateY(0);
+}
+
+@media(max-width:1280px) {
+  .newsletter {
+    padding: 0px 80px;
+    margin-bottom: 120px;
+    gap: 20px;
+  }
+
+  .newsletter h1 {
+    font-size: 36px;
+  }
+
+  .newsletter p {
+    font-size: 16px;
+  }
+
+  .newsletter div {
+    width: 600px;
+    height: 60px;
+  }
+
+  .newsletter div input {
+    width: 400px;
+  }
+
+  .newsletter div button {
+    width: 160px;
+    height: 60px;
+  }
+}
+
+@media(max-width:1024px) {
+  .newsletter {
+    margin-bottom: 60px;
+    border-radius: 15px;
+  }
+
+  .newsletter h1 {
+    font-size: 30px;
+  }
+
+  .newsletter p {
+    font-size: 14px;
+  }
+
+  .newsletter div {
+    width: 500px;
+    height: 50px;
+  }
+
+  .newsletter div input {
+    width: 300px;
+    font-size: 14px;
+  }
+
+  .newsletter div button {
+    width: 120px;
+    height: 50px;
+    font-size: 14px;
+  }
+}
+
+@media(max-width:800px) {
+  .newsletter {
+    margin-bottom: 30px;
+    height: 35vh;
+    border-radius: 12px;
+  }
+
+  .newsletter h1 {
+    font-size: 18px;
+  }
+
+  .newsletter p {
+    font-size: 12px;
+  }
+
+  .newsletter div {
+    width: 400px;
+    height: 40px;
+  }
+
+  .newsletter div input {
+    width: 200px;
+    font-size: 13px;
+  }
+
+  .newsletter div button {
+    width: 100px;
+    height: 40px;
+    font-size: 13px;
+  }
+}
+
+@media(max-width:500px) {
+  .newsletter {
+    height: 25vh;
+    width: 100%;
+    padding: 0;
+    gap: 15px;
+    border-radius: 10px;
+  }
+
+  .newsletter h1 {
+    font-size: 16px;
+  }
+
+  .newsletter p {
+    font-size: 13px;
+    max-width: 200px;
+    text-align: center;
+  }
+
+  .newsletter div {
+    width: 290px;
+  }
+
+  .newsletter div input {
+    width: 130px;
+  }
+}

@@ -1,0 +1,249 @@
+/* ! 🔥 💪🏻 Bn Ramadan fullstack MERN project 2 ( E-commerce fullstack app ) */
+/* ! " The end of this project is the completing of future successes and creativity , Just strive, be patient, commit and keep going. " */
+/* ! 🔥 💪🏻 Always forward ! 💪🏻 🔥 */
+
+.offers {
+  width: 65%;
+  height: 100vh;
+  display: flex;
+  margin: 100px auto;
+  padding: 40px 140px;
+  background: linear-gradient(180deg, #fde1ff 0%, #e1ffea22 60%);
+  border-radius: 30px;
+  box-shadow: 0 10px 30px rgba(253, 225, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.offers::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.8), transparent 60%);
+  animation: lightMove 8s infinite linear;
+  z-index: 1;
+}
+
+@keyframes lightMove {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  50% {
+    transform: translate(0%, 0%) scale(1.2);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.offers-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.offers-left h1 {
+  color: #171717;
+  font-size: 80px;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  transform: translateX(-20px);
+  opacity: 0;
+  animation: slideIn 0.8s ease forwards;
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.offers-left p {
+  color: #171717;
+  font-size: 22px;
+  font-weight: 500;
+  margin: 20px 0;
+  transform: translateX(-20px);
+  opacity: 0;
+  animation: slideIn 0.8s ease forwards 0.2s;
+}
+
+.offers-left button {
+  width: 282px;
+  height: 69px;
+  border-radius: 34.5px;
+  background: linear-gradient(45deg, #ff4141, #ff6b6b);
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 500;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  transform: translateY(20px);
+  opacity: 0;
+  animation: buttonAppear 0.8s ease forwards 0.4s;
+}
+
+@keyframes buttonAppear {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.offers-left button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: 0.5s;
+}
+
+.offers-left button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(255, 65, 65, 0.3);
+}
+
+.offers-left button:hover::before {
+  left: 100%;
+}
+
+.offers-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: 50px;
+  position: relative;
+  z-index: 2;
+}
+
+.offers-right img {
+  transition: all 0.3s ease;
+  transform: translateY(0);
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@media(max-width:1280px) {
+  .offers {
+    padding: 20px 60px;
+    margin-bottom: 80px;
+    height: 40vh;
+  }
+
+  .offers-left h1 {
+    font-size: 30px;
+  }
+
+  .offers-left p {
+    font-size: 16px;
+  }
+
+  .offers-right img {
+    width: 200px;
+  }
+
+  .offers-left button {
+    width: 160px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .offers-right {
+    padding-top: 10px;
+  }
+}
+
+@media(max-width:800px) {
+  .offers {
+    margin-bottom: 60px;
+    border-radius: 20px;
+  }
+
+  .offers-left h1 {
+    font-size: 22px;
+  }
+
+  .offers-left p {
+    font-size: 13px;
+    margin: 10px 0;
+  }
+
+  .offers-right img {
+    width: 180px;
+  }
+
+  .offers-left button {
+    width: 140px;
+    height: 30px;
+    font-size: 12px;
+    margin-top: 15px;
+  }
+}
+
+@media(max-width:500px) {
+  .offers {
+    height: 25vh;
+    margin-bottom: 50px;
+    padding: 15px 30px;
+  }
+
+  .offers-left h1 {
+    font-size: 16px;
+  }
+
+  .offers-left p {
+    font-size: 10px;
+  }
+
+  .offers-right img {
+    width: 120px;
+  }
+
+  .offers-left button {
+    width: 120px;
+    height: 25px;
+    font-size: 10px;
+    margin-top: 12px;
+  }
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+}

@@ -1,0 +1,131 @@
+/* ! 🔥 💪🏻 Bn Ramadan fullstack MERN project 2 ( E-commerce fullstack app ) */
+/* ! " The end of this project is the completing of future successes and creativity , Just strive, be patient, commit and keep going. " */
+/* ! 🔥 💪🏻 Always forward ! 💪🏻 🔥 */
+
+.descriptionbox {
+  margin: 120px 170px;
+  transition: all 0.3s ease;
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.descriptionbox-navigator {
+  display: flex;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+}
+
+.descriptionbox-nav-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 600;
+  width: 171px;
+  height: 70px;
+  border: 1px solid #d0d0d0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.descriptionbox-nav-box:hover {
+  background: #f5f5f5;
+  transform: translateY(-2px);
+}
+
+.descriptionbox-nav-box::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #ff5a5a;
+  transition: width 0.3s ease;
+}
+
+.descriptionbox-nav-box:hover::after {
+  width: 100%;
+}
+
+.descriptionbox-nav-box.fade {
+  background: #fbfbfb;
+  color: #555;
+  transition: all 0.3s ease;
+}
+
+.descriptionbox-nav-box.fade:hover {
+  color: #333;
+  background: #f0f0f0;
+}
+
+.descriptionbox-description {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  border: 1px solid #d0d0d0;
+  padding: 48px;
+  padding-bottom: 70px;
+  border-radius: 0 0 8px 8px;
+  background: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.descriptionbox-description:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.descriptionbox-description p {
+  line-height: 1.6;
+  color: #444;
+  transition: all 0.3s ease;
+}
+
+.descriptionbox-description p:hover {
+  color: #222;
+}
+
+@media(max-width:1280px) {
+  .descriptionbox {
+    margin: 60px;
+  }
+
+  .descriptionbox-nav-box {
+    font-size: 15px;
+    width: 150px;
+    height: 60px;
+  }
+}
+
+@media(max-width:800px) {
+  .descriptionbox {
+    margin: 60px 20px;
+  }
+
+  .descriptionbox-description {
+    font-size: 14px;
+    padding: 30px;
+  }
+
+  .descriptionbox-nav-box {
+    font-size: 14px;
+    width: 120px;
+    height: 50px;
+  }
+}

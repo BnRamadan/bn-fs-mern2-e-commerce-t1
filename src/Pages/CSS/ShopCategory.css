@@ -1,0 +1,218 @@
+/* ! 🔥 💪🏻 Bn Ramadan fullstack MERN project 2 ( E-commerce fullstack app ) */
+/* ! " The end of this project is the completing of future successes and creativity , Just strive, be patient, commit and keep going. " */
+/* ! 🔥 💪🏻 Always forward ! 💪🏻 🔥 */
+
+.shopcategory-banner {
+  display: block;
+  margin: 20px auto;
+  width: 90%;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.shopcategory-banner:hover {
+  transform: scale(1.02) translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.shopcategory-banner::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.shopcategory-banner:hover::after {
+  opacity: 1;
+}
+
+.shopcategory-indexSort {
+  display: flex;
+  margin: 0px 70px;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 20px 0;
+  position: relative;
+}
+
+.shopcategory-sort {
+  padding: 12px 25px;
+  border-radius: 40px;
+  border: 2px solid #e0e0e0;
+  transition: all 0.3s ease;
+  background-color: white;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+}
+
+.shopcategory-sort:hover {
+  background-color: #f8f8f8;
+  border-color: #d4c4c4;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.shopcategory-indexSort p span {
+  font-weight: 600;
+  color: #333;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.shopcategory-indexSort p span::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #d4c4c4;
+  transition: width 0.3s ease;
+}
+
+.shopcategory-indexSort p span:hover::after {
+  width: 100%;
+}
+
+.shopcategory-products {
+  margin: 30px 67px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  perspective: 1000px;
+}
+
+.shopcategory-products .item {
+  border-radius: 12px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  transform-style: preserve-3d;
+}
+
+.shopcategory-products .item:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.shopcategory-loadmore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 150px auto;
+  width: 233px;
+  height: 69px;
+  border-radius: 75px;
+  background: linear-gradient(135deg, #e0d3d3, #d4c4c4);
+  color: #666;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.shopcategory-loadmore:hover {
+  background: linear-gradient(135deg, #d4c4c4, #c8b6b6);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  color: #444;
+}
+
+.shopcategory-loadmore::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: rotate(45deg);
+  transition: transform 0.6s;
+}
+
+.shopcategory-loadmore:hover::before {
+  transform: rotate(45deg) translate(50%, 50%);
+}
+
+@media(max-width:1280px) {
+  .shopcategory-banner {
+    margin: 20px auto;
+    width: 90%;
+  }
+
+  .shopcategory-indexSort {
+    width: 90%;
+    margin: auto;
+    padding: 15px 0;
+  }
+
+  .shopcategory-sort {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+
+  .shopcategory-indexSort p {
+    font-size: 12px;
+  }
+
+  .shopcategory-products {
+    width: 90%;
+    margin: 15px auto;
+    row-gap: 40px;
+  }
+
+  .shopcategory-products .item {
+    margin: auto;
+  }
+
+  .shopcategory-loadmore {
+    margin: 100px auto;
+    width: 200px;
+    height: 60px;
+    font-size: 16px;
+  }
+}
+
+@media(max-width:800px) {
+  .shopcategory-banner {
+    width: 95%;
+  }
+
+  .shopcategory-products {
+    width: 95%;
+    gap: 20px;
+  }
+
+  .shopcategory-loadmore {
+    margin: 60px auto;
+    width: 150px;
+    height: 40px;
+    font-size: 13px;
+  }
+}
+
+@media(max-width:500px) {
+  .shopcategory-products {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+
+  .shopcategory-products .item:hover {
+    transform: translateY(-4px) scale(1.01);
+  }
+}

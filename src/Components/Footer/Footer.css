@@ -1,0 +1,221 @@
+/* ! 🔥 💪🏻 Bn Ramadan fullstack MERN project 2 ( E-commerce fullstack app ) */
+/* ! " The end of this project is the completing of future successes and creativity , Just strive, be patient, commit and keep going. " */
+/* ! 🔥 💪🏻 Always forward ! 💪🏻 🔥 */
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin-top: 150px;
+  background: linear-gradient(to bottom, transparent, rgba(251, 251, 251, 0.8));
+  padding: 40px 20px;
+  position: relative;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #ebebeb, transparent);
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation-delay: 0.1s;
+}
+
+.footer-logo:hover {
+  transform: translateY(-5px);
+}
+
+.footer-logo img {
+  transition: transform 0.4s ease;
+}
+
+.footer-logo:hover img {
+  transform: rotate(10deg);
+}
+
+.footer-logo p {
+  color: #383838;
+  font-size: 56px;
+  font-weight: 700;
+  cursor: pointer;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(45deg, #383838, #666);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.footer-logo p:hover {
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.footer-links {
+  display: flex;
+  list-style: none;
+  gap: 50px;
+  color: #252525;
+  font-size: 20px;
+  animation-delay: 0.2s;
+}
+
+.footer-links li {
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  padding: 5px 0;
+}
+
+.footer-links li::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #252525, #4a4a4a);
+  transition: width 0.3s ease;
+  border-radius: 5px;
+}
+
+.footer-links li:hover {
+  color: #000;
+  transform: translateY(-2px);
+}
+
+.footer-links li:hover::after {
+  width: 100%;
+}
+
+.footer-social-icon {
+  display: flex;
+  gap: 20px;
+  animation-delay: 0.3s;
+}
+
+.footer-icons-container {
+  padding: 10px;
+  padding-bottom: 6px;
+  background: #fbfbfb;
+  border: 1px solid #ebebeb;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-icons-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: 0.5s;
+}
+
+.footer-icons-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-color: #d1d1d1;
+}
+
+.footer-icons-container:hover::before {
+  left: 100%;
+}
+
+.footer-copyright {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  margin-bottom: 30px;
+  color: #1a1a1a;
+  font-size: 20px;
+  text-align: center;
+  animation-delay: 0.4s;
+}
+
+.footer-copyright hr {
+  width: 80%;
+  border: none;
+  border-radius: 10px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #c7c7c7, transparent);
+  transition: all 0.3s ease;
+}
+
+.footer-copyright:hover hr {
+  background: linear-gradient(90deg, transparent, #a0a0a0, transparent);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+@media(max-width:800px) {
+  .footer {
+    gap: 20px;
+    padding: 20px 10px;
+  }
+
+  .footer-logo {
+    gap: 10px;
+    align-items: end;
+  }
+
+  .footer-logo img {
+    width: 40px;
+  }
+
+  .footer-logo p {
+    font-size: 25px;
+  }
+
+  .footer-links {
+    font-size: 14px;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer-social-icon img {
+    width: 22px;
+  }
+
+  .footer-copyright {
+    font-size: 13px;
+  }
+
+  .footer-icons-container:hover {
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.footer>* {
+  animation: fadeInUp 0.5s ease forwards;
+  opacity: 0;
+}
